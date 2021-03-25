@@ -7,6 +7,7 @@ import java.util.TimerTask;
 
 
 class UpdateSpeed extends TimerTask {
+
 	private TrainController trainController;
 
 	public UpdateSpeed(TrainController trainController) {
@@ -24,7 +25,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-	private Timer timer;
+	private Timer speedUpdateTimer = new Timer();
 
 	@Override
 	public void followSpeed() {
@@ -65,7 +66,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	public void seedUpdateTimerStart(int l) {
-		timer.schedule(new UpdateSpeed(this), l);
+		speedUpdateTimer.schedule(new UpdateSpeed(this), l);
 	}
 
 }
