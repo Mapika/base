@@ -2,10 +2,14 @@ package hu.bme.mit.train.interfaces;
 
 public interface TrainUser {
 
-	int getJoystickPosition();
+    int getJoystickPosition();
 
-	boolean getAlarmFlag();
+    boolean getAlarmFlag();
 
-	void overrideJoystickPosition(int joystickPosition);
+    void overrideJoystickPosition(int joystickPosition);
+
+    boolean getAlarmState();
+
+    void setAlarmState(boolean alarmSate);
 
 }

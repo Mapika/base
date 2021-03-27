@@ -1,13 +1,11 @@
 package hu.bme.mit.train.system;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
-import hu.bme.mit.train.system.TrainSystem;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class TrainSystemTest {
 
@@ -51,8 +49,8 @@ public class TrainSystemTest {
 	}
 
 	@Test
-	public void CheesyTest(){
-		Assert.assertEquals(0,0);
+	public void CheesyTest() {
+		Assert.assertTrue(true);
 	}
 
 	
