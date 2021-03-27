@@ -5,8 +5,9 @@ import hu.bme.mit.train.interfaces.TrainUser;
 
 public class TrainUserImpl implements TrainUser {
 
-	private TrainController controller;
+	private final TrainController controller;
 	private int joystickPosition;
+	private boolean alarm;
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
@@ -27,5 +28,16 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 	}
+
+	@Override
+	public boolean getAlarmState() {
+		return this.alarm;
+	}
+
+	@Override
+	public void setAlarmState(boolean alarmSate) {
+		this.alarm = alarmSate;
+	}
+
 
 }
